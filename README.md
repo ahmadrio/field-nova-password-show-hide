@@ -6,12 +6,12 @@ composer require opanegro/field-nova-password-show-hide
 
 Usage
 ```php
-use Opanegro\FieldPasswordShowHide\FieldPasswordShowHide;
+use Opanegro\FieldNovaPasswordShowHide\FieldNovaPasswordShowHide;
 ...
 public function fields(Request $request)
 {
     return [
-        FieldPasswordShowHide::make('Password')->onlyOnForms();
+        FieldNovaPasswordShowHide::make('Password')->onlyOnForms();
     ];
 }
 ```
