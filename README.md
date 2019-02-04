@@ -1,7 +1,7 @@
 # field-nova-password-show-hide
 Install
 ```php
-composer require opanegro/field-password-show-hide
+composer require opanegro/field-nova-password-show-hide
 ```
 
 Usage
