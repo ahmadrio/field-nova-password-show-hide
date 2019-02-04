@@ -422,14 +422,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mixins: [__WEBPACK_IMPORTED_MODULE_0_laravel_nova__["FormField"], __WEBPACK_IMPORTED_MODULE_0_laravel_nova__["HandlesValidationErrors"]],
-
     props: ['resourceName', 'resourceId', 'field'],
-
     methods: {
         /*
          * Set the initial, internal value for the field.
@@ -438,7 +438,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.value = this.field.value || '';
         },
 
-
         /**
          * Fill the given FormData object with the field's internal value.
          */
@@ -446,12 +445,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             formData.append(this.field.attribute, this.value || '');
         },
 
-
         /**
          * Update the field's internal value.
          */
         handleChange: function handleChange(value) {
             this.value = value;
+        },
+        switchVisibility: function switchVisibility(elem) {
+            var passwordField = document.getElementById(elem);
+            if (passwordField.getAttribute('type') === 'password') passwordField.setAttribute('type', 'text');else passwordField.setAttribute('type', 'password');
         }
     }
 });
@@ -10690,7 +10692,7 @@ var render = function() {
           class: _vm.errorClasses,
           attrs: {
             id: _vm.field.name,
-            type: "text",
+            type: "password",
             placeholder: _vm.field.name
           },
           domProps: { value: _vm.value },
@@ -10702,7 +10704,21 @@ var render = function() {
               _vm.value = $event.target.value
             }
           }
-        })
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "ml-auto btn btn-default btn-primary mt-3",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                _vm.switchVisibility(_vm.field.name)
+              }
+            }
+          },
+          [_vm._v("\n            Show/Hide\n        ")]
+        )
       ])
     ],
     2
