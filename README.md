@@ -15,3 +15,7 @@ public function fields(Request $request)
     ];
 }
 ```
+
+Preview
+
+![18_02_2019](https://thumbs.gfycat.com/DrearyImperturbableDachshund-size_restricted.gif)
