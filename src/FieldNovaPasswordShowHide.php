@@ -2,6 +2,7 @@
 
 namespace Opanegro\FieldNovaPasswordShowHide;
 
+use Illuminate\Support\Facades\Hash;
 use Laravel\Nova\Fields\Field;
 
 class FieldNovaPasswordShowHide extends Field

@@ -6,6 +6,7 @@
                    :class="errorClasses"
                    :placeholder="field.name"
                    v-model="value"
+                   autocomplete="new-password"
             />
             <button type="button" class="ml-auto btn btn-default btn-primary mt-3" @click="switchVisibility(field.name)">
                 Show/Hide
@@ -24,7 +25,8 @@
              * Set the initial, internal value for the field.
              */
             setInitialValue() {
-                this.value = this.field.value || ''
+                // this.value = this.field.value || ''
+                this.value = ''
             },
             /**
              * Fill the given FormData object with the field's internal value.
